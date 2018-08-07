@@ -31,36 +31,47 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 
+;; Download the color-theme, if necessary
 (unless (package-installed-p 'color-theme)
   (package-install 'color-theme))
 
+;; Download clojure-mode, if necessary
 (unless (package-installed-p 'clojure-mode)
   (package-install 'clojure-mode))
 
+;; Download Interactively Do Things package, if necessary
 (unless (package-installed-p 'ido-vertical-mode)
   (package-install 'ido-vertical-mode))
 
+;; Download CIDER, if necessary
 (unless (package-installed-p 'cider)
   (package-install 'cider))
 
+;; Download which-key, if necessary
 (unless (package-installed-p 'which-key)
   (package-install 'which-key))
 
+;; Download company, if necessary
 (unless (package-installed-p 'company)
   (package-install 'company))
 
+;; Download Clojure Refactor tool, if necessary
 (unless (package-installed-p 'clj-refactor)
   (package-install 'clj-refactor))
 
+;; Download Rainbow Delims (for paredit), if necessary
 (unless (package-installed-p 'rainbow-delimiters)
   (package-install 'rainbow-delimiters))
 
+;; Download YAML mode, if necessary
 (unless (package-installed-p 'yaml-mode)
   (package-install 'yaml-mode))
 
+;; Download JSON mode, if necessary
 (unless (package-installed-p 'json-mode)
   (package-install 'json-mode))
 
+;; Download Markdown mode, if necessary
 (unless (package-installed-p 'markdown-mode)
   (package-install 'markdown-mode))
 
@@ -77,14 +88,18 @@
 (defvar predicate nil)
 (defvar inherit-input-method nil)
 
+;; Enable IDO
 (require 'ido)
 (ido-mode t)
 
+;; Enabled IDO vertical mode
 (require 'ido-vertical-mode)
 (ido-vertical-mode t)
 
+;; Enable Which Key
 (require 'which-key)
 (which-key-mode)
+
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
